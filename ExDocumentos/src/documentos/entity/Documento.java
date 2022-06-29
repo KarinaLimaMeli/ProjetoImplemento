@@ -1,4 +1,6 @@
-package documentos;
+package documentos.entity;
+
+import documentos.service.ImprimirImpl;
 
 public abstract class Documento {
 
@@ -12,5 +14,7 @@ public abstract class Documento {
         this.numeroPaginas = numeroPaginas;
         this.autor = autor;
     }
-
+    public void imprimir(ImprimirImpl imprimirImpl){
+        imprimirImpl.imprimir(this);
+    }
 }
